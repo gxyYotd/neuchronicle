@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'home'] , function(){
+	Route::controller('/' , 'HomeController');
+});
